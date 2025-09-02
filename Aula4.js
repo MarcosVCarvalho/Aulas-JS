@@ -59,3 +59,69 @@ while (fila.length > 0) {
    console.log(fila);
 }
 console.log('Fila vazia')
+
+console.log('')
+console.log("at 6")
+let alunos = ['marcos', 'davi', 'pedro', 'miguel', 'luis', 'cristo'];
+const p1 = alunos.slice(0,(alunos.length/2));
+const p2 = alunos.slice(alunos.length / 2);
+console.log(p1);
+console.log(p2);
+
+console.log('')
+console.log("at 7")
+const alunosRemovidos = alunos.splice(1,2, 'magão') //começãndo do casa[1] delete 2 itens e depois add dois nomes
+console.log(alunos)
+
+console.log('')
+console.log("at 8")
+const salapy = ['davi', 'thiago'];
+const salajava = ['mv', 'miguel'];
+console.log(salajava.concat(salapy));
+
+console.log('')
+console.log("at 9")
+let notas1 = [10,5,3,6,10];
+const listaseila = [alunos,notas1]
+console.log(listaseila)
+
+console.log('')
+console.log("at 10")
+function procurandolista(str) {
+    if (alunos.includes(str)) {
+        return `A media do ${str} é ${notas1[alunos.indexOf(str)]}`
+    } 
+    return "não encontrado"
+
+}
+console.log(procurandolista('luis'))
+
+console.log('')
+console.log("at 11")
+for (let index = 0; index < alunos.length; index++) {
+    console.log(`Aluno: ${alunos[index]} numero: ${index}`)
+}
+
+console.log('')
+console.log("at 12")
+let media1 = somaMedias = 0;
+for (const i of notas1) {
+    somaMedias += notas[i]
+}
+media1 = somaMedias / notas1.length;
+console.log(media1)
+
+console.log('')
+console.log("at 13")
+function somaArray(array) {
+    let soma
+    for (const elemento of array) {
+        soma = array[elemento]
+    }
+    return soma
+}
+console.log(somaArray(notas1))
+
+
+
+
