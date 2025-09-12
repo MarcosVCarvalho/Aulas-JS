@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Anotações</title>
+    <style>
+        body{
+            background-color: rgb(0, 9, 34);
+            color: rgb(255, 187, 0);
+            font-family: 'Courier New', Courier, monospace;
+            font: normal 30pt;
+            font-size: large
+        }
+        hr {
+            border: 1
+        }
+        input {
+            background-color: bisque;
+            font-size: large;
+            border: none;
+            padding: 5px 0px;
+        }
+        button {
+            background-color: bisque;
+            font-size: large;
+            border: none;
+
+        }
+        #formulario {
+            text-align: center ; 
+        }
+        #lista {
+             background-color: rgb(9, 1, 17);
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Anotações</h1>
+    <hr/>
+    <div id = "formulario">
+        <input type="text">
+        <button>Novo Item</button>  
+    </div>
+    <div id="lista">
+        <ul>
+            <li>comprar abacate</li>
+        </ul>
+    </div>
+
+    <script scr="../js/compoments/todos.js"></script>
+</body>
+</html>
