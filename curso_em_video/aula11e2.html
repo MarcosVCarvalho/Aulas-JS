@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Verificador de pais</h1>
+    <hr>
+    <input type="text" class="pergunta" placeholder="Digite seu pais">
+    <input type="button" class="calcular" value="clique para calcular" onclick="calcular()">
+    <hr>
+    <div class="resposta"></div>
+    <script>
+        const resP = document.querySelector('.pergunta')
+        function calcular() {
+            if (resP.value.toLowerCase() == 'brasileiro') {
+                document.querySelector('.resposta').innerHTML = 'vc e brasileiro'
+            } else {
+                document.querySelector('.resposta').innerHTML = 'vc e estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>
