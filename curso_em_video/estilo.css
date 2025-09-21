@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(76, 132, 253);
+    font: normal, 15pt, arial;
+}
+
+header {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+section {
+    background: white;
+    box-shadow: 5px 5px  10px rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 15px;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    margin: auto;
+    .fotoHora{
+        align-items: center;
+        width: 300px;
+        height: 300px;
+        padding: 8px;
+    }
+    .dizHora {
+        font: normal, 65pt, arial;
+    }
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}

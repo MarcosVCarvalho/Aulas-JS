@@ -1,0 +1,20 @@
+body {
+    background-color: brown;
+    font: normal, 15pt, arial;
+    text-align: center;
+}
+
+.d1 {
+    font: medium, 40pt, arial;
+    text-align: center;
+    margin: auto;
+    background-color: aliceblue;
+    padding: 15px;
+    border-radius: 50px;
+    height: 200px;
+    width: 400px;
+}
+.intIdade {
+    width: 350px;
+    height: 30px;
+}
