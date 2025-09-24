@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+</head>
+<body>
+    <div id="app">
+        ToDos 
+        <hr>
+        <input type="text" v-model="contexto">
+        <input type="checkbox" v-model="opcao">
+        <button type="button" @click="addTask">Add Task</button>
+        <ul>
+            <li v-for="todo in todos">
+                <input type="checkbox" v-model="todo.completed">
+                {{ todo.task}}
+            </li>
+        </ul>
+        ToDos Completed
+        <ul>
+            <li v-for="todo in todosCompleted">
+                {{ todo.task}}
+            </li>
+        </ul>
+        ToDos unCompleted
+        <ul>
+            <li v-for="todo in todosUnCompleted">
+                {{ !todo.completed ? todo.task : '' }}
+            </li>
+            <div v-if="todosUnCompleted.length == 0">Todas as tarefas foram completadas</div>
+        </ul>
+
+        <input type="text" v-model="first_name">
+
+        {{ full_name }}
+
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const { createApp, ref, computed } = Vue
+
+        createApp({
+            setup() {
+
+                const todos = ref([
+                    { task: 'tarefa 01', completed: false },
+                    { task: 'tarefa 02', completed: true },
+                    { task: 'tarefa 03', completed: true },
+                    { task: 'tarefa 04', completed: true },
+                    { task: 'tarefa 05', completed: false },
+                ])
+
+                const todosCompleted = computed(() => {
+                    return (todos.value).filter(task => task.completed )
+                })
+                
+                const todosUnCompleted = computed(() => {
+                    return (todos.value).filter(task => !task.completed )
+                })
+
+                const addTask = () => {
+                    const task = { task: contexto.value, completed: opcao.value }
+                    todos.value.push(task)
+                }
+
+                const full_name = computed(() => {
+                    return `${first_name.value} ${last_name.value}`
+                })
+
+                const contexto = ref('')
+                const opcao = ref(false)
+                const first_name = ref('Luiz')
+                const last_name = ref('Monteiro')
+
+                return {
+                    first_name,
+                    full_name,
+                    opcao,
+                    contexto,
+                    addTask,
+                    todos,
+                    todosCompleted,
+                    todosUnCompleted,
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
