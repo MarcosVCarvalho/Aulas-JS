@@ -16,8 +16,9 @@ export default {
   name: "App",
   components: {
     primerioComponente,
-    Life,
     Pessoa,
+    Life,
+
   },
   data() {
     return {
@@ -26,4 +27,13 @@ export default {
     },
 };
 </script>
-http://127.0.0.1:5500/README.md
+
+<style>
+  body{
+    background-color: #131313;
+    color: #fff}
+    a {
+      color: #2acf09;
+    }
+</style>
+http:// 127.0.0.1:5500/README.md
